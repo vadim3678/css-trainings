@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Banner Effects</title>
+    <link rel="stylesheet"
+        type="text/css"
+        href="styles.css">
+</head>
+
+<body>
+    <section class="sec">
+        <video autoplay muted loop>
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        <h2>Run</h2>
+        <div class="dot"></div>
+    </section>
+
+    <script>
+        const dot = document.querySelector('.dot');
+        const sec = document.querySelector('.sec');
+        dot.onclick = () => {
+            dot.classList.toggle('active'); 
+            sec.classList.toggle('active');
+        }
+        document.addEventListener("mousemove", (e) => {
+            const dot = document.querySelector('.dot');
+            dot.style.left = e.pageX + 'px';
+            dot.style.top = e.pageY + 'px';
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search Box With JS</title>
+    <link rel="stylesheet"
+        type="text/css"
+        href="styles.css">
+</head>
+
+<body>
+    <div class="search">
+        <div class="icon"></div>
+        <div class="input">
+            <input id="mysearch"
+                type="text"
+                placeholder="Search">
+        </div>
+        <span class="clear"></span>
+    </div>
+    <script>
+        const icon = document.querySelector('.icon');
+        const search = document.querySelector('.search');
+        const clear = document.querySelector('.clear');
+
+        icon.onclick = function () {
+            search.classList.toggle('active');
+        }
+        clear.onclick = function () {
+            document.getElementById('mysearch').value = '';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+/* Реализация индикатора скролла */
+body {
+  position: relative;
+  background-image: linear-gradient(to right top, #ffcc00 50%, #eee 50%);
+  background-size: 100% calc(100% - 100vh + 5px);
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+body::after {
+  content: "";
+  position: fixed;
+  top: 5px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  z-index: -1;
+}
+/* Дизайнерская вкусовщина */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font: 18px / 1.4 sans-serif;
+  max-width: 720px;
+  margin: auto;
+  padding: 20px;
+}
+h1, p {
+  margin-bottom: 20px;
+}
+hr {
+  border: solid #999;
+  border-width: 1px 0 0 0;
+  max-width: 50%;
+  margin: auto;
+}
+.perfscan {
+  font-weight: bold;
+  margin: 20px 0;
+  text-align: center;
+  bottom: 0;
+  background: #fff;
+  padding: 5px;
+}
+a {
+  color: #000;
+}
